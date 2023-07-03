@@ -1,4 +1,5 @@
 using System.Text;
+using System.Windows.Forms;
 
 namespace Codio
 {
@@ -220,6 +221,38 @@ namespace Codio
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (listBox1.Items.Count > 0)
+            {
+                SaveFileDialog dlg = new SaveFileDialog();
+                dlg.Filter = "Text file (*.txt)|*.txt";
+                dlg.DefaultExt = "txt";
+                dlg.AddExtension = true;
+
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    StreamWriter writer = new StreamWriter(dlg.FileName);
+
+                    for (int i = 0; i < listBox1.Items.Count; i++)
+                    {
+                        writer.WriteLine((string)listBox1.Items[i]);
+                    }
+
+
+
+                    writer.Close();
+                }
+
+                dlg.Dispose();
+            }
+            else
+            {
+                Form3 f3 = new(); // Show error dialog
+                f3.ShowDialog();
+            }
         }
     }
 }

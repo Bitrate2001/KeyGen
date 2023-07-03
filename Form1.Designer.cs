@@ -46,17 +46,21 @@
             label4 = new Label();
             numericUpDown1 = new NumericUpDown();
             numericUpDown2 = new NumericUpDown();
+            tableLayoutPanel5 = new TableLayoutPanel();
+            button7 = new Button();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
+            tableLayoutPanel5.SuspendLayout();
             SuspendLayout();
             // 
             // button1
             // 
             button1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            button1.FlatStyle = FlatStyle.Flat;
             button1.Location = new Point(635, 3);
             button1.Name = "button1";
             button1.Size = new Size(156, 23);
@@ -68,7 +72,7 @@
             // textBox1
             // 
             textBox1.Dock = DockStyle.Bottom;
-            textBox1.Location = new Point(3, 66);
+            textBox1.Location = new Point(3, 14);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(794, 23);
             textBox1.TabIndex = 1;
@@ -77,6 +81,7 @@
             // button2
             // 
             button2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            button2.FlatStyle = FlatStyle.Flat;
             button2.Location = new Point(477, 3);
             button2.Name = "button2";
             button2.Size = new Size(152, 23);
@@ -88,6 +93,7 @@
             // button3
             // 
             button3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            button3.FlatStyle = FlatStyle.Flat;
             button3.Location = new Point(319, 3);
             button3.Name = "button3";
             button3.Size = new Size(152, 23);
@@ -99,6 +105,7 @@
             // button4
             // 
             button4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            button4.FlatStyle = FlatStyle.Flat;
             button4.Location = new Point(3, 3);
             button4.Name = "button4";
             button4.Size = new Size(152, 23);
@@ -112,15 +119,16 @@
             listBox1.Dock = DockStyle.Fill;
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(3, 321);
+            listBox1.Location = new Point(3, 205);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(794, 267);
+            listBox1.Size = new Size(794, 383);
             listBox1.TabIndex = 6;
             listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // button5
             // 
             button5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            button5.FlatStyle = FlatStyle.Flat;
             button5.Location = new Point(161, 3);
             button5.Name = "button5";
             button5.Size = new Size(152, 23);
@@ -155,21 +163,23 @@
             // 
             tableLayoutPanel1.AutoSize = true;
             tableLayoutPanel1.ColumnCount = 1;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.Controls.Add(textBox1, 0, 0);
             tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 1);
             tableLayoutPanel1.Controls.Add(tableLayoutPanel3, 0, 2);
-            tableLayoutPanel1.Controls.Add(listBox1, 0, 4);
             tableLayoutPanel1.Controls.Add(tableLayoutPanel4, 0, 3);
+            tableLayoutPanel1.Controls.Add(listBox1, 0, 5);
+            tableLayoutPanel1.Controls.Add(tableLayoutPanel5, 0, 4);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 5;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 47.8873253F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 52.1126747F));
+            tableLayoutPanel1.RowCount = 6;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 42F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 84F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 272F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.Size = new Size(800, 591);
             tableLayoutPanel1.TabIndex = 10;
             // 
@@ -187,11 +197,11 @@
             tableLayoutPanel2.Controls.Add(button5, 1, 0);
             tableLayoutPanel2.Controls.Add(button4, 0, 0);
             tableLayoutPanel2.Dock = DockStyle.Fill;
-            tableLayoutPanel2.Location = new Point(3, 95);
+            tableLayoutPanel2.Location = new Point(3, 43);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 1;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel2.Size = new Size(794, 94);
+            tableLayoutPanel2.Size = new Size(794, 34);
             tableLayoutPanel2.TabIndex = 2;
             // 
             // tableLayoutPanel3
@@ -204,7 +214,7 @@
             tableLayoutPanel3.Controls.Add(label1, 0, 0);
             tableLayoutPanel3.Controls.Add(label2, 1, 0);
             tableLayoutPanel3.Dock = DockStyle.Fill;
-            tableLayoutPanel3.Location = new Point(3, 195);
+            tableLayoutPanel3.Location = new Point(3, 83);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 1;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
@@ -227,59 +237,95 @@
             tableLayoutPanel4.Controls.Add(numericUpDown1, 2, 0);
             tableLayoutPanel4.Controls.Add(numericUpDown2, 4, 0);
             tableLayoutPanel4.Dock = DockStyle.Fill;
-            tableLayoutPanel4.Location = new Point(3, 237);
+            tableLayoutPanel4.Location = new Point(3, 125);
             tableLayoutPanel4.Name = "tableLayoutPanel4";
             tableLayoutPanel4.RowCount = 1;
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel4.Size = new Size(794, 78);
+            tableLayoutPanel4.Size = new Size(794, 34);
             tableLayoutPanel4.TabIndex = 8;
             // 
             // button6
             // 
+            button6.BackColor = SystemColors.ActiveCaption;
+            button6.Dock = DockStyle.Fill;
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button6.Location = new Point(3, 3);
             button6.Name = "button6";
-            button6.Size = new Size(75, 23);
+            button6.Size = new Size(152, 28);
             button6.TabIndex = 8;
             button6.Text = "Gen Key(s)";
-            button6.UseVisualStyleBackColor = true;
+            button6.UseVisualStyleBackColor = false;
             button6.Click += button6_Click;
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             label3.AutoSize = true;
-            label3.Location = new Point(161, 0);
+            label3.Location = new Point(161, 9);
             label3.Name = "label3";
-            label3.Size = new Size(92, 15);
+            label3.Size = new Size(152, 15);
             label3.TabIndex = 9;
             label3.Text = "Nr. of key chars:";
+            label3.TextAlign = ContentAlignment.MiddleRight;
             label3.Click += label3_Click;
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             label4.AutoSize = true;
-            label4.Location = new Point(477, 0);
+            label4.Location = new Point(477, 9);
             label4.Name = "label4";
-            label4.Size = new Size(122, 15);
+            label4.Size = new Size(152, 15);
             label4.TabIndex = 10;
             label4.Text = "Nr. of keys generated:";
+            label4.TextAlign = ContentAlignment.MiddleRight;
             // 
             // numericUpDown1
             // 
-            numericUpDown1.Location = new Point(319, 3);
+            numericUpDown1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            numericUpDown1.Location = new Point(319, 5);
             numericUpDown1.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(120, 23);
+            numericUpDown1.Size = new Size(152, 23);
             numericUpDown1.TabIndex = 11;
             numericUpDown1.Value = new decimal(new int[] { 10, 0, 0, 0 });
             // 
             // numericUpDown2
             // 
-            numericUpDown2.Location = new Point(635, 3);
+            numericUpDown2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            numericUpDown2.Location = new Point(635, 5);
             numericUpDown2.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numericUpDown2.Name = "numericUpDown2";
-            numericUpDown2.Size = new Size(120, 23);
+            numericUpDown2.Size = new Size(156, 23);
             numericUpDown2.TabIndex = 12;
             numericUpDown2.Value = new decimal(new int[] { 10, 0, 0, 0 });
+            // 
+            // tableLayoutPanel5
+            // 
+            tableLayoutPanel5.ColumnCount = 2;
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 80F));
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tableLayoutPanel5.Controls.Add(button7, 1, 0);
+            tableLayoutPanel5.Dock = DockStyle.Fill;
+            tableLayoutPanel5.Location = new Point(3, 165);
+            tableLayoutPanel5.Name = "tableLayoutPanel5";
+            tableLayoutPanel5.RowCount = 1;
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel5.Size = new Size(794, 34);
+            tableLayoutPanel5.TabIndex = 9;
+            // 
+            // button7
+            // 
+            button7.Dock = DockStyle.Fill;
+            button7.FlatStyle = FlatStyle.Flat;
+            button7.Location = new Point(638, 3);
+            button7.Name = "button7";
+            button7.Size = new Size(153, 28);
+            button7.TabIndex = 0;
+            button7.Text = "Export";
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
             // 
             // Form1
             // 
@@ -302,6 +348,7 @@
             tableLayoutPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
+            tableLayoutPanel5.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -326,5 +373,7 @@
         private Label label4;
         private NumericUpDown numericUpDown1;
         private NumericUpDown numericUpDown2;
+        private TableLayoutPanel tableLayoutPanel5;
+        private Button button7;
     }
 }
