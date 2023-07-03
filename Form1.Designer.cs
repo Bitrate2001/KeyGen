@@ -290,6 +290,7 @@
             numericUpDown1.Size = new Size(152, 23);
             numericUpDown1.TabIndex = 11;
             numericUpDown1.Value = new decimal(new int[] { 10, 0, 0, 0 });
+            numericUpDown1.ValueChanged += numericUpDown1_ValueChanged;
             // 
             // numericUpDown2
             // 

@@ -185,10 +185,10 @@ namespace Codio
             }
         }
 
-        static string GenerateKey()
+        static string GenerateKey(int charNumber)
         {
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-            const int keyLength = 10;
+            int keyLength = charNumber;
             Random random = new Random();
 
             StringBuilder keyBuilder = new StringBuilder();
@@ -208,11 +208,12 @@ namespace Codio
 
         private void button6_Click(object sender, EventArgs e)
         {
-            const int numberOfKeys = 10;
+            int numberOfKeys = (int)numericUpDown2.Value;
 
             for (int i = 0; i < numberOfKeys; i++)
             {
-                string key = GenerateKey();
+                int charNum = (int)numericUpDown1.Value;
+                string key = GenerateKey(charNum);
                 listBox1.Items.Add(key.ToString());
                 ListCounter++;
             }
@@ -253,6 +254,11 @@ namespace Codio
                 Form3 f3 = new(); // Show error dialog
                 f3.ShowDialog();
             }
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
