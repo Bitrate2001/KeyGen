@@ -290,6 +290,7 @@
             numericUpDown1.Size = new Size(152, 23);
             numericUpDown1.TabIndex = 11;
             numericUpDown1.Value = new decimal(new int[] { 10, 0, 0, 0 });
+            numericUpDown1.ValueChanged += numericUpDown1_ValueChanged;
             // 
             // numericUpDown2
             // 
@@ -337,7 +338,7 @@
             Controls.Add(tableLayoutPanel1);
             KeyPreview = true;
             Name = "Form1";
-            Text = "Codio list";
+            Text = "KeyGen 1.0";
             Load += Form1_Load;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
