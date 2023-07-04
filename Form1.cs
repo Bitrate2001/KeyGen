@@ -13,6 +13,8 @@ namespace Codio
         //Init memory var for undo
         public string? mem1 = null; //Init mem 1 variable for undo action
         public bool isSingle = false; // Init isSingle bool for single list delete undo
+        public bool isDelDelete = false; // Init isDelDelete bool for single selected list delete undo
+        public object? textDeleted = null; // Init index var for undo selected deleted list element
 
         private int _list_counter = 0;
 
@@ -106,6 +108,14 @@ namespace Codio
                 }
                 list_content = null;
             }
+            else if ((textDeleted != null) && (isDelDelete = true) && (isSingle = true))
+            {
+                listBox1.Items.Add(textDeleted.ToString()); // Instert stored mem last array item back to lisBox1
+                ListCounter++;
+                isDelDelete = false;
+                textDeleted = null;
+                list_content = null;
+            }
             else if ((mem1 != null) && (list_content != null) && (isSingle = true))
             {
                 textBox1.AppendText(mem1);
@@ -163,7 +173,7 @@ namespace Codio
 
         }
 
-        private void ListBox1_MouseDown(object? sender, MouseEventArgs e)
+        private void ListBox1_MouseDown(object? sender, MouseEventArgs e) // On right mouse click copy list item
         {
             if (e.Button == MouseButtons.Right)
             {
@@ -204,6 +214,21 @@ namespace Codio
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+        private void listBox1_KeyDown(object sender, KeyEventArgs e) // On press del on selected listBox1 item delete it
+        {
+            if (Keys.Delete == e.KeyCode)
+            {
+                if (listBox1.SelectedItem != null)
+                {
+                    isSingle = true;
+                    isDelDelete = true;
+                    ListCounter--; // Counter decrement
+                    list_content = listBox1.Items.OfType<string>().ToArray(); // Storing all data form listBox1 for undo action
+                    textDeleted = (listBox1.SelectedItem);
+                    listBox1.Items.Remove(listBox1.SelectedItem); // Remove item selected
+                }
+            }
         }
 
         private void button6_Click(object sender, EventArgs e)
